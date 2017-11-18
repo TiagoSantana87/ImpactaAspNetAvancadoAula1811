@@ -18,6 +18,10 @@ namespace Loja.Dominio
         {
             var erros = new List<string>();
 
+            if (string.IsNullOrEmpty(NomeLote?.Trim()))
+            {
+                erros.Add("Nome do lote é obrigatório.");
+            }
 
             return erros;
         }

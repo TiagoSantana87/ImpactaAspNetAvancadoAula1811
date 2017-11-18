@@ -1,4 +1,6 @@
-﻿namespace Loja.Dominio
+﻿using System;
+
+namespace Loja.Dominio
 {
     public class Produto
     {
@@ -11,5 +13,15 @@
         public int Estoque { get; set; }
         public bool Ativo { get; set; }
         public bool EmLeilao { get; set; }
+
+        internal static object Sum()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static object Sum(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
